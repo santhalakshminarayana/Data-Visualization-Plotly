@@ -22,7 +22,6 @@ To use offline import libraries as follow
 ```
 from plotly.offline import init_notebook_mode,iplot
 import plotly.graph_objs as go
-import numpy as np
 import IPython
 init_notebook_mode(connected=True)
 def cell():
@@ -79,3 +78,27 @@ Import `figure_factory` as <br>
 
 *Histogram Contour*<br>
 ![image](./images/Histogram-contour.png)
+
+# Cufflinks
+
+With Cufflinks,Pandas DataFrames are easily plotted at a single line like native Pandas plotting.<br>
+Only chanage is instead of **plot()** use **iplot()** to plot pandas.<br>
+
+Install Cufflinks 
+```$ pip install cufflinks ```
+or
+```$ sudo pip install cufflinks ```
+To use offline import cufflinks as below along with above imports
+```
+import plotly.plotly as py
+import plotly.graph_objs as go
+from plotly.offline import init_notebook_mode,iplot
+import cufflinks as cf
+import IPython
+import plotly.figure_factory as ff
+init_notebook_mode(connected=True)
+cf.go_offline(connected=True)
+cf.set_config_file(offline=False, world_readable=True, theme='ggplot')
+def cell():
+    display(IPython.core.display.HTML('''<script src="/static/components/requirejs/require.js"></script>'''))
+```
