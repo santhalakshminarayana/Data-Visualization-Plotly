@@ -30,6 +30,7 @@ def cell():
 ```
 **Note:** Here ```cell()``` method is for Google-Colab which should be call at every cell executing plot to display.<br>
 
+### View this notebook at [nbviewer](https://nbviewer.jupyter.org/github/santhalakshminarayana/Data-Visualization-Plotly/blob/master/Plotly-1s.ipynb) 
 
 We can create beautiful plots with less coding.<br>
 ![image](./images/meter.png)
@@ -54,6 +55,8 @@ We can create beautiful plots with less coding.<br>
 
 # Part 2
 Plotly plots are extended with `plotly.figure_factory` for better plotting than vanill plotly.<br>
+
+### View this notebook at [nbviewer](https://nbviewer.jupyter.org/github/santhalakshminarayana/Data-Visualization-Plotly/blob/master/Plotly-2.ipynb)  
 
 Import `figure_factory` as <br>
 ```import plotly.figure_factory as ff```
@@ -102,3 +105,4 @@ cf.set_config_file(offline=False, world_readable=True, theme='ggplot')
 def cell():
     display(IPython.core.display.HTML('''<script src="/static/components/requirejs/require.js"></script>'''))
 ```
+### View this notebook at [nbviewer](https://nbviewer.jupyter.org/github/santhalakshminarayana/Data-Visualization-Plotly/blob/master/Plotly-Cufflinks.ipynb) 
