@@ -25,8 +25,18 @@ import plotly.graph_objs as go
 import IPython
 init_notebook_mode(connected=True)
 def cell():
-    display(IPython.core.display.HTML('''<script src="/static/components/requirejs/require.js"></script>'''))
-    init_notebook_mode(connected=False)
+  import IPython
+  display(IPython.core.display.HTML('''
+        <script src="/static/components/requirejs/require.js"></script>
+        <script>
+          requirejs.config({
+            paths: {
+              base: '/static/base',
+              plotly: 'https://cdn.plot.ly/plotly-1.5.1.min.js?noext',
+            },
+          });
+        </script>
+        '''))
 ```
 **Note:** Here ```cell()``` method is for Google-Colab which should be call at every cell executing plot to display.<br>
 
@@ -103,6 +113,17 @@ init_notebook_mode(connected=True)
 cf.go_offline(connected=True)
 cf.set_config_file(offline=False, world_readable=True, theme='ggplot')
 def cell():
-    display(IPython.core.display.HTML('''<script src="/static/components/requirejs/require.js"></script>'''))
+  import IPython
+  display(IPython.core.display.HTML('''
+        <script src="/static/components/requirejs/require.js"></script>
+        <script>
+          requirejs.config({
+            paths: {
+              base: '/static/base',
+              plotly: 'https://cdn.plot.ly/plotly-1.5.1.min.js?noext',
+            },
+          });
+        </script>
+        '''))
 ```
 ### View this notebook at [nbviewer](https://nbviewer.jupyter.org/github/santhalakshminarayana/Data-Visualization-Plotly/blob/master/Plotly-Cufflinks.ipynb) 
